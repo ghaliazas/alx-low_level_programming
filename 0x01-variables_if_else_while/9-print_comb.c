@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
- * description: print 0,1, -9
- * return: 0 (success)
+ * main - Entry point
+ *
+ * Description: print 0,1, -9
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -20,6 +22,6 @@ int main(void)
 		}
 		digit++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
