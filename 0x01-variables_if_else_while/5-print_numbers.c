@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * description: print all single digit numbers
+ * Description: Print all single digit numbers
  *
- * return: always 0 (success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -17,6 +17,6 @@ int main(void)
 		printf("%i", digit);
 		digit++;
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
