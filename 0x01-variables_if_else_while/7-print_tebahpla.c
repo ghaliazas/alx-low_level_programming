@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * description: print a-z in reverse
+ * Description: print a-z in reverse
  *
- * return: always 0 (success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -17,6 +17,6 @@ int main(void)
 		putchar(ch);
 		ch--;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
