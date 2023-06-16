@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * description: print 0-9 using putchar while using int variable
- * return: always 0 (success)
+ * Description: print 0-9 using putchar while using int variable
+ *
+ * Return: always 0 (success)
  */
 
 int main(void)
@@ -17,6 +18,6 @@ int main(void)
 		putchar(digit + '0');
 		digit++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
