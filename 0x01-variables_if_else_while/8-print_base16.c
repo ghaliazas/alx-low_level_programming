@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * description: print numbers of base 16 in lowercase
+ * Description: print numbers of base 16 in lowercase
  *
- * return: always 0 (success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -20,6 +20,6 @@ int main(void)
 			digit += 39;
 		digit++;
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
