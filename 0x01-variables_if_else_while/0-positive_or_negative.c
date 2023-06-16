@@ -3,9 +3,11 @@
 #include <time.h>
 
 /**
- * main - entry point
- * description: true or false validation
- * return: 0 (success)
+ * main - Entry point
+ *
+ * Description: True or False validation
+ *
+ * Return: Always  0 (Success)
  */
 
 int main(void)
