@@ -1,22 +1,24 @@
-#include "lain.h"
+#include "main.h"
 
 /**
- * *_strchr - fills memory with a constant byte
- * @s: pointer to put constant
- * @c: constant
- * Return: pointer to
+ * _strchr - Locates the first occurrence of a character in a string
+ * @s: Pointer to the string
+ * @c: Character to be located
+ *
+ * Return: Pointer to the first occurrence of the character c in the string s,
+ *         or NULL if the character is not found
  */
 
 char *_strchr(char *s, char c)
 {
-	int itr;
-
-	for (itr = 0; s[itr] >= '\0' ; itr++)
+	while (*s != '\0')
 	{
-		if (s[itr] == c)
-		{
-			return (s + itr);
-		}
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	return ('\0');
+
+	if (c == '\0')
+		return (s);
+	return (NULL);
 }
