@@ -9,6 +9,8 @@
 
 int last_index(char *s)
 {
+	int index;
+
 	if (*s == '\0')
 		return (-1);
 	int index = last_index(s + 1);
