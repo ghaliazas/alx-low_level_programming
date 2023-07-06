@@ -9,13 +9,12 @@
 
 int last_index(char *s)
 {
-	int i;
+	int idx;
 
 	if (*s == '\0')
 		return (-1);
-	int i = last_index(s + 1);
-
-	return (i == -1 ? 0 : i + 1);
+	idx = last_index(s + 1);
+	return (idx == -1 ? 0 : idx + 1);
 }
 
 /**
