@@ -2,17 +2,18 @@
 #include <stdio.h>
 
 /**
- * _strlen - Calculates the length of a string.
- * @s: The string to calculate the length of.
- * Return: The length of the string.
+ * last_index - Returns the last index of a string.
+ * @s: Pointer to the string.
+ * Return: The last index of the string, or -1 if the string is empty.
  */
 
-int _strlen(char *s)
+int last_index(char *s)
 {
 	if (*s == '\0')
-		return (0);
-	else
-		return (1 + _strlen(s + 1));
+		return (-1);
+	int index = last_index(s + 1);
+
+	return (index == -1 ? 0 : index + 1);
 }
 
 /**
@@ -28,9 +29,10 @@ int check_palindrome(char *s, int start, int end)
 {
 	if (start >= end)
 		return (1);
-	if (s[start] != s[end])
+	else if (s[start] != s[end])
 		return (0);
-	return (check_palindrome(s, start + 1, end - 1));
+	else
+		return (check_palindrome(s, start + 1, end - 1));
 }
 
 /**
@@ -41,12 +43,9 @@ int check_palindrome(char *s, int start, int end)
 
 int is_palindrome(char *s)
 {
-	int len = _strlen(s);
+	int end = last_index(s);
 
-	if (len <= 1)
+	if (end == -1)
 		return (1);
-	if (*s != s[len - 1])
-		return (0);
-	s[len - 1] = '\0';
-	return (is_palindrome(s + 1));
+	return (check_palindrome(s, 0, end));
 }
