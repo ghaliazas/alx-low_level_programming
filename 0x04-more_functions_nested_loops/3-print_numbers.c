@@ -1,18 +1,29 @@
 #include "main.h"
 
 /**
- * print_numbers - print 0 - 9
- * only using _putchar twice
- *
- * Return: Always 0 (success)
+ * print_numbers - print 0-9
+ * return: void
  */
 
 void print_numbers(void)
 {
-	int num = 0;
+	char c;
 
-	do {
-		_putchar(num + 48);
-	} while (num >= 0 && num <= 9);
+	for (c = '0'; c <= '9'; c++)
+	{
+		_putchar(c);
+	}
 	_putchar('\n');
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+int main(void)
+{
+	print_numbers();
+	return (0);
 }
